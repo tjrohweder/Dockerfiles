@@ -2,11 +2,11 @@ FROM alpine:3.6
 
 MAINTAINER <tjrohweder@gmail.com>
 
-WORKDIR /var/www/html
+WORKDIR /var/www
 
 # SETTING ENVIRONMENTS - NEW_RELIC
 ENV NR_INSTALL_SILENT 1
-ENV NR_INSTALL_KEY <your_license>
+ENV NR_INSTALL_KEY a48f7c2dcc5872129ac8681568cee0014160b986
 
 # FETCH REPOS
 RUN apk update

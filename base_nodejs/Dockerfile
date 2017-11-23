@@ -2,6 +2,9 @@ FROM centos:7
 
 MAINTAINER <tjrohweder@gmail.com>
 
+#Adding nginx repo
+COPY ./files/nginx.repo /etc/yum.repos.d/
+
 #Installing Epel Release REPO
 RUN yum -y install epel-release 
 

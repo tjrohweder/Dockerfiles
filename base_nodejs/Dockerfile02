@@ -1,4 +1,4 @@
-FROM tjrohweder/centos7_node:2.0.0
+FROM tjrohweder/centos7_node:1.0.0
 
 MAINTAINER <tjrohweder@gmail.com>
 

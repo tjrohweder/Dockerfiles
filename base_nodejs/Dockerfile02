@@ -2,7 +2,7 @@ FROM tjrohweder/centos7_node:2.0.0
 
 MAINTAINER <tjrohweder@gmail.com>
 
-WORKDIR /usr/src/app
+WORKDIR /var/www/html
 
 # COPY NGINX CONFIGS
 RUN rm -rf /etc/nginx; mkdir -p /run/nginx
@@ -15,4 +15,4 @@ RUN npm install; ./node_modules/.bin/ng build --prod --bh /ecred/ --aot=false
 RUN rm -rf .angular-cli.json CHANGELOG.md DEV.md Dockerfile Dockerfile02 README.md build.sh dist.sh dist_dev.zip dist_hml.zip dist_prd.zip dist_prd_old.zip \
 docker_conf e2e karma.conf.js package-lock.json package.json protractor.conf.js tsconfig.json tslint.json node_modules src
 
-#ENTRYPOINT ["/usr/sbin/nginx", "-g", "daemon off;"]
+ENTRYPOINT ["/usr/sbin/nginx", "-g", "daemon off;"]

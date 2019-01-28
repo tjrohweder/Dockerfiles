@@ -2,8 +2,6 @@ FROM centos:7
 
 WORKDIR /var/www
 
-MAINTAINER <tjrohweder@gmail.com>
-
 #Adding nginx repo
 COPY ./files/nginx.repo /etc/yum.repos.d/
 
@@ -19,8 +17,8 @@ RUN curl --silent --location https://rpm.nodesource.com/setup_9.x | bash -; yum 
 RUN yum -y remove epel-release python-pip; rm -rf /var/cache/yum; rm -rf node_modules
 
 # COPY NGINX CONFIGS
-RUN rm -rf /etc/nginx; mkdir -p /run/nginx
-COPY ./docker_conf/nginx /etc/nginx
+RUN rm -rf /etc/nginx
+RUN mkdir -p /run/nginx
 
 ADD . .
 

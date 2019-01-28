@@ -1,7 +1,5 @@
 FROM alpine:3.7
 
-MAINTAINER <tjrohweder@gmail.com>
-
 WORKDIR /var/www
 
 # SETTING ENVIRONMENTS - NEW_RELIC
